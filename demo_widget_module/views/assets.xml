@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="demo assets" inherit_id="web.assets_backend">
+            <xpath expr="script[last()]" position="after">
+                <!-- widget assets -->
+                <script type="text/javascript" src="/demo_widget_module/static/src/js/demo_widget_module.js"></script>
+                <link href="/demo_widget_module/static/src/css/demo_widget_module.css" rel="stylesheet"></link>
+            </xpath>
+        </template>
+    </data>
+</odoo>

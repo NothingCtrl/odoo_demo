@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="your_module_your_view" model="ir.ui.view">
+            <field name="name">Form View</field>
+            <field name="model">demo.widget.model</field>
+            <field name="arch" type="xml">
+                <form string="Demo Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <!-- call widget, it will render widget template demo_widget_tmpl.xml -->
+                            <widget name="demo_widget_foo"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="demo_widget_module_tree_view" model="ir.ui.view">
+            <field name="name">demo_widget_module_tree_view</field>
+            <field name="model">demo.widget.model</field>
+            <field name="arch" type="xml">
+                <tree string="Demo Tree">
+                    <field name="name"/>
+                    <field name="create_date"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="demo_widget_action" model="ir.actions.act_window">
+            <field name="name">Views</field>
+            <field name="res_model">demo.widget.model</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Demo Widget" id="demo_widget_main" web_icon="demo_widget_module,static/description/icon.png"
+                  sequence="999"/>
+        <menuitem name="Views" id="demo_widget_menu" action="demo_widget_module.demo_widget_action"
+                  parent="demo_widget_main"/>
+
+    </data>
+</odoo>

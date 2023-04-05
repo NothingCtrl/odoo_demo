@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="demo_widget_module_foo">
+        <div class="my_class">
+            <div class="row">
+                <h4>Demo Widget Foo</h4>
+            </div>
+            <div class="class_ex">
+                <label for="name1">Name 1</label>
+                <input class="form-control class_m1" name="name1" id="name1"/>
+            </div>
+            <div class="class_ex">
+                <label for="name2">Name 2</label>
+                <input class="form-control class_m2" name="name2" id="name2"/>
+            </div>
+        </div>
+    </t>
+</templates>
